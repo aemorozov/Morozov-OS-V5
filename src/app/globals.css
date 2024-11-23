@@ -23,6 +23,25 @@ body {
   transition: 0.35s ease;
 }
 
+p {
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+li {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+a {
+  color: #1c4dda;
+}
+
+strong {
+  font-weight: bold;
+}
+
 .outgoing-link {
   content: url("/img/link-symbol.png");
   margin-left: 3px;
@@ -50,10 +69,12 @@ body {
   width: 340px;
   background-color: #252525;
   transform: translateY(40px) translateX(220px);
+  min-height: 400px;
 }
 
 hr {
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 li {
@@ -80,6 +101,7 @@ li {
   transform: translateY(-70px) translateX(20px);
   text-align: center;
   overflow: hidden;
+  min-width: 360px;
 }
 
 .translateY {
@@ -137,7 +159,7 @@ li {
   color: #1e1e1e;
   font-size: 14px;
   font-weight: 500;
-  margin-left: 6px;
+  margin: 0 0 0 6px;
 }
 
 .img-top-line {
@@ -264,6 +286,8 @@ input[type="number"] {
   padding-left: 15px;
   color: #1e1e1e;
   font-family: monospace;
+  display: block;
+  margin-top: 20px;
 }
 
 .z-index10 {
@@ -278,7 +302,7 @@ input[type="number"] {
   display: flex;
   flex-direction: row;
   position: fixed;
-  bottom: 5px;
+  bottom: 10px;
   justify-content: center;
   transition: 0.35s ease;
   /* opacity: 0; */
@@ -314,14 +338,15 @@ input[type="number"] {
   opacity: 1;
 }
 
-.icon-img-qr,
-.icon-img-ae {
-  width: 30px;
+.icon-img-qr {
+  width: 36px;
+  border-radius: 3px;
 }
 
 .icon-img-readme,
 .icon-img-snake {
-  width: 38px;
+  width: 44px;
+  border-radius: 3px;
 }
 
 .icon-img-github,
@@ -382,6 +407,100 @@ input[type="number"] {
 .padding-left-20 {
   padding-left: 20px;
   margin-bottom: 0;
+}
+
+.aboutme-main-header {
+  font-size: 1.5em;
+  color: #1e1e1e;
+  font-family: monospace;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.aboutme-litle-header {
+  font-size: 1.2em;
+  color: #1e1e1e;
+  font-family: monospace;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 1px;
+}
+
+.readme-text {
+  font-size: 1em;
+}
+
+.display-none {
+  display: none;
+}
+
+.snake-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 31px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  text-align: center;
+  overflow: hidden;
+}
+
+.container_snake {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  flex-wrap: wrap;
+  color: #f85656;
+}
+
+.square {
+  width: 14px;
+  height: 14px;
+  background-color: #393939;
+  margin: 2px;
+  box-shadow: 0 0 2px #000;
+}
+
+.game_over {
+  display: none;
+  width: 100%;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  color: #fffffffd;
+}
+
+.startButton {
+  display: inline-block;
+  color: #fffffffd;
+  text-decoration: none;
+  margin: 30px;
+}
+
+.button {
+  display: none;
+  color: #fffffffd;
+  text-decoration: none;
+  margin: 30px;
+}
+
+.start_game {
+  display: block;
+  width: 100%;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  color: #fffffffd;
+}
+
+.level {
+  display: inline-block;
+  color: #fffffffd;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @media screen and (max-width: 920px) {

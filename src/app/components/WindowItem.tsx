@@ -1,14 +1,15 @@
-import { FC } from "react";
+import { FC, ReactElement } from "react";
 
 type WindowItemProps = {
   name: string;
-  className: string;
   icon: string;
+  classNamesWindow?: string;
+  component?: ReactElement;
 };
 
-export const WindowItem: FC<WindowItemProps> = ({ name, className, icon }) => {
+export const WindowItem: FC<WindowItemProps> = ({ name, classNamesWindow, icon, component }) => {
   return (
-    <div className={className}>
+    <div className={classNamesWindow}>
       <div className="top-line">
         <div className="name-in-topline">
           <img className="img-top-line" src={icon} alt={name + " icon"} />
@@ -16,6 +17,7 @@ export const WindowItem: FC<WindowItemProps> = ({ name, className, icon }) => {
         </div>
         <div className="slide-down-button">╳</div>
       </div>
+      {component}
     </div>
   );
 };

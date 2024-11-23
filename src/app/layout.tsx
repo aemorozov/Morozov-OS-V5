@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Menu, Head, UpdateInfo, WindowItem, Windows } from "./components/index";
+import { Menu, Head, UpdateInfo, Windows } from "./components/index";
 
 export default function RootLayout() {
   return (

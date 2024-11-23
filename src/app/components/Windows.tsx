@@ -1,16 +1,14 @@
 import { WindowItem } from "./WindowItem";
+import { windows } from "../data/index";
 
 export const Windows = () => {
   return (
     <>
-      {windows.map(({ name, classNames, icon }) => {
-        return <WindowItem key={name} name={name} className={classNames} icon={icon} />;
+      {windows.map(({ name, classNamesWindow, icon, component }) => {
+        return (
+          <WindowItem key={name} name={name} classNamesWindow={classNamesWindow} icon={icon} component={component} />
+        );
       })}
     </>
   );
 };
-
-const windows = [
-  { name: "Snake 1.5", classNames: "snake-container", icon: "/icon/snake.jpg" },
-  { name: "About me", classNames: "readme-container", icon: "/icon/text-x-readme-icon.png" },
-];
