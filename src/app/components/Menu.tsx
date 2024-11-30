@@ -3,13 +3,18 @@ import { windows } from "../data/index";
 import { WindowItem } from "./WindowItem";
 
 export const Menu = () => {
-  const getMenuClick = () => {};
-
   return (
     <>
       {windows.map(({ name, classNamesWindow, icon, children }) => {
         return (
-          <WindowItem key={name} name={name} classNamesWindow={classNamesWindow} icon={icon} children={children} />
+          <WindowItem
+            key={name}
+            name={name}
+            classNamesWindow={classNamesWindow}
+            icon={icon}
+            children={children}
+            close={close}
+          />
         );
       })}
       <div className="menu-bar">

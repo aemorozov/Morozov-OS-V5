@@ -14,6 +14,10 @@ type MenuWindowItemProps = {
 export const MenuWindowItem = ({ item, index }: MenuWindowItemProps) => {
   const [isVisible, setIsVisible] = useState(index === 0);
 
+  const close = () => {
+    setIsVisible(false);
+  };
+
   return (
     <>
       <MenuItem
@@ -24,7 +28,7 @@ export const MenuWindowItem = ({ item, index }: MenuWindowItemProps) => {
           if (window) window.style.zIndex = String(getUpZIndex());
         }}
       />
-      {item.children && <WindowItem {...item} isVisible={isVisible} />}
+      {item.children && <WindowItem {...item} isVisible={isVisible} close={close} />}
     </>
   );
 };

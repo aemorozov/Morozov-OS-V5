@@ -4,15 +4,10 @@ import { getUpZIndex, openWindow } from "../functions";
 import cn from "classnames";
 import { DataItem } from "../data";
 
-type WindowItemProps = DataItem & { isVisible?: boolean };
+type WindowItemProps = DataItem & { isVisible?: boolean; close: VoidFunction };
 
-export const WindowItem: FC<WindowItemProps> = ({ name, classNamesWindow, icon, children, isVisible }) => {
+export const WindowItem: FC<WindowItemProps> = ({ name, classNamesWindow, icon, children, isVisible, close }) => {
   const ref = useRef<HTMLDivElement>(null);
-
-  const closeCross = () => {
-    const item = document.querySelector("." + classNamesWindow);
-    item?.classList.add("click02");
-  };
 
   return (
     <div
@@ -26,7 +21,7 @@ export const WindowItem: FC<WindowItemProps> = ({ name, classNamesWindow, icon, 
           <img className="img-top-line" src={icon} alt={name + " icon"} />
           <p className="p-top-line">{name}</p>
         </div>
-        <div className="slide-down-button" onClick={closeCross}>
+        <div className="slide-down-button" onClick={close}>
           ╳
         </div>
       </div>
