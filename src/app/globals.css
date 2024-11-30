@@ -55,7 +55,6 @@ strong {
   -webkit-box-shadow: 0px 1px 4px 2px rgba(30, 6, 6, 0.2);
   -moz-box-shadow: 0px 1px 4px 2px rgba(30, 6, 6, 0.2);
   box-shadow: 0px 1px 4px 2px rgba(30, 6, 6, 0.2);
-  /* opacity: 0; */
   transition: 0.15s ease;
   position: absolute;
 }
@@ -68,8 +67,10 @@ strong {
 .container {
   width: 340px;
   background-color: #252525;
-  transform: translateY(40px) translateX(220px);
-  min-height: 400px;
+  top: -60vh;
+  left: 10vw;
+  min-height: 285px;
+  font-size: 0.9rem;
 }
 
 hr {
@@ -86,22 +87,24 @@ li {
   width: 600px;
   height: 520px;
   background-color: #eff4ed;
-  transform: translateX(-150px) translateY(10px);
-}
-
-.text-readme {
-  font-size: 1.01rem;
-  font-weight: 100;
+  top: -80vh;
+  left: -30vw;
 }
 
 .snake-container {
   width: 600px;
   height: 500px;
   background-color: #1e1e1e;
-  transform: translateY(-70px) translateX(20px);
+  top: -82vh;
+  left: -10vw;
   text-align: center;
   overflow: hidden;
   min-width: 360px;
+}
+
+.text-readme {
+  font-size: 1.01rem;
+  font-weight: 100;
 }
 
 .translateY {
@@ -141,6 +144,7 @@ li {
   padding: 20px;
   padding-top: 10px;
   box-sizing: border-box;
+  color: #f2f2f2;
 }
 
 .top-line {
@@ -172,6 +176,7 @@ input,
   width: 98%;
   margin: 20px 1% 0 1%;
   background-color: #eff4ed;
+  color: #222;
   height: 35px;
   border-radius: 5px;
   border: none;
@@ -208,6 +213,10 @@ input[type="number"] {
   height: 280px;
 }
 
+.height170 {
+  height: 170px;
+}
+
 .create_button,
 .create_XLS_button {
   color: #1e1e1e;
@@ -237,7 +246,13 @@ input[type="number"] {
 }
 
 .click01 {
-  transform: translateY(1px);
+  transform: translateY(1px) translateX(0px);
+}
+
+.click02 {
+  transform: translateY(10px) translateX(0px);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .author-link {

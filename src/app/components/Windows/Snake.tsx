@@ -5,13 +5,13 @@ export const Snake = () => {
         <h2>Snake_1.5</h2>
         <p>Select a level:</p>
         <p>
-          <a href="##" className="level" id="10" speed="200">
+          <a href="##" className="level" id="10">
             1
           </a>
-          <a href="##" className="level" id="15" speed="180">
+          <a href="##" className="level" id="15">
             2
           </a>
-          <a href="##" className="level" id="20" speed="150">
+          <a href="##" className="level" id="20">
             3
           </a>
         </p>

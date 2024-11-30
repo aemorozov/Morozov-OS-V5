@@ -33,7 +33,7 @@ level.forEach(function (lvl, x) {
         }
         level[x].style.color = "#56c5f8";
         lines = parseInt(level[x].getAttribute("id")); // выбираем размер поля
-        speed = parseInt(speedSelect[x].getAttribute("speed")); // указываем скорость
+        speed = 2000 / parseInt(speedSelect[x].getAttribute("id")) + parseInt(speedSelect[x].getAttribute("id")); // указываем скорость
         speedChange = (speed / 100) * 2;
     });
 });
